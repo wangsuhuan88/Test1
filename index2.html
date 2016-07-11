@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<meta name="robots" content="all" />
+<meta name="keywords" content="" />
+<!--这里的关键词不能用标签,必须是手写,用半角逗号隔开,不要出现空格-->
+<meta name="description" content="" />
+<!--这里的关键词不能用标签,必须是手写,用半角逗号隔开,不要出现空格-->
+<title>轩辕剑-首页</title>
+<script type="text/javascript" src="http://ue.shouyoucdn.com/cache/lib/v2/jquery-1.4.4.js"></script>
+<style type="text/css">
+
+	a:hover{z-index: 3;}
+	a:hover .m-back{z-index: 2;}
+	.m-wrap,.m-front,.m-back{width: 400px; height: 400px;}
+	.m-wrap{-webkit-transform: perspective(1200px);position: relative;}
+	.m-front{ position: absolute;left: 0; top: 0;z-index: 1;}
+	.m-back{position: absolute;left:0;top: 0;color: #fff; background:#ff0; }
+	.m-front img{width: 400px; height: 400px;}
+
+	a:hover:not(.switch) .m-back{-webkit-transform:rotateY(0deg); -moz-transform:rotateY(0deg);-ms-transform:rotateY(0deg);-o-transform:rotateY(0deg);transform:rotateY(0deg);display: block;}
+	a:hover:not(.switch) .m-front{-webkit-transform:rotateY(180deg);-moz-transform:rotateY(180deg);-ms-transform:rotateY(180deg);-o-transform:rotateY(180deg);transform:rotateY(180deg);}
+	
+	.m-front{-webkit-transform:rotateY(0deg);-moz-transform:rotateY(0deg);-ms-transform:rotateY(0deg);-o-transform:rotateY(0deg);transform:rotateY(0deg);}
+	.m-back{-webkit-transform:rotateY(-180deg);-moz-transform:rotateY(-180deg);-ms-transform:rotateY(-180deg);-o-transform:rotateY(-180deg);transform:rotateY(-180deg);}
+
+	.m-front,.m-back{
+		-webkit-transform-style: preserve-3d;
+		-mox-transform-style: preserve-3d;
+		-ms-transform-style: preserve-3d;
+		-o-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+		-webkit-transition:0.6s;
+		-moz-transition:0.6s;
+		-ms-transition:0.6s;
+		-o-transition:0.6s;
+		transition:0.6s;
+		backface-visibility: hidden; 
+	}
+
+
+
+
+
+	.stage{width: 300px;height: 300px;float: left;margin:15px;position: relative;-webkit-perspective:1200px;-moz-perspective:1200px;-ms-perspective:1200px;-o-perspective:1200px;}
+	.container{position: absolute;top: 50%;left: 50%;-webkit-transform-style:preserve-3d;-moz-transform:preserve-3d;-ms-transform:preserve-3d;-o-transform:preserve-3d;}
+	.container img:nth-child(1){z-index: 1;opacity: .6;}
+	.s1 img:nth-child(2){z-index: 2;-webkit-transform:rotateX(45deg);-moz-transform:rotateX(45deg);-o-transform:rotate(45deg);-ms-transform:rotateX(deg);}
+	.s2 img:nth-child(2){z-index: 2;-webkit-tranform:rotateY(45deg);-moz-transform:rotateY(45deg);-ms-tranform:rotateY(45deg);-o-transform:rotateY(45deg);}
+	.s3 img:nth-child(2){z-index:2;-webkit-transform:rotateZ(45deg);-mox-transform:rotateZ(45deg);-ms-transform:rotateZ45deg;-o-transform:rotateZ(45deg);}
+	.s4 img:nth-child(2){z-index: 2;-webkit-transform:rotate3d(.6,1,.6,45deg);-moz-tranform:rotate3d(.6,1,.6,45deg);-ms-transform:rotate3d(45deg);-o-transform:rotate3d(.6,1,.6,45deg);}
+
+
+	.m-news{width: 400px; height: 500px;}
+	.m-news .u-newlist{list-style: none;}
+	.u-item{width: 400px;}
+	.u-item .u-txt{height: 30px;line-height: 30px;}
+	.u-item .u-pic{display: none; width: 400px; height:100px;}
+	.u-item .u-pic img{width: 400px; height:100px;}
+
+
+	.m-prod a:hover .p-txt{z-index: 3;}
+	.m-prod{width: 400px;height: 200px;-webkit-transform: perspective(1200px);}
+	.m-prod img{width: 400px; height: 200px; box-shadow: 0px 3px 8px rgba(0,0,0,0.3); -webkit-transform: translateZ(50px);border-radius: 15px;}
+	.p-pic,.p-txt{width: 400px; height: 200px; position: absolute;left:0; top: 0;text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+  background: -webkit-linear-gradient(to bottom,  rgba(236,241,244,1) 0%,rgba(190,202,217,1) 100%);
+  background: -ms-linear-gradient(to bottom,  rgba(236,241,244,1) 0%,rgba(190,202,217,1) 100%);
+  background: linear-gradient(to bottom,  rgba(236,241,244,1) 0%,rgba(190,202,217,1) 100%);
+	}
+	.p-pic{z-index: 1;}
+	.p-txt{color: #ff0; -webkit-transform:rotateX(-90deg);box-shadow: 0px 3px 8px rgba(0,0,0,0.3);   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(236,241,244,1)), color-stop(100%,rgba(190,202,217,1)));
+      background: -webkit-linear-gradient(top,  rgba(236,241,244,1) 0%,rgba(190,202,217,1) 100%);}
+  	.m-prod a:hover img{border-radius: 15px;}
+	.m-prod a:hover .p-pic{-webkit-transform:rotateX(90deg);}
+	.m-prod a:hover .p-txt{-webkit-transform:rotateX(0deg);}
+
+	.p-pic,.p-txt{-webkit-transform-style:preserve-3d;-webkit-transition:.8s;}
+
+
+</style>
+</head>
+<body>
+<div class="m-wrap">
+	<a>
+		<div class="m-back">
+		文字介绍，呵呵！
+	</div>
+	<div class="m-front">		
+	</div>
+	</a>
+</div>
+
+
+
+<div class="m-prod">
+	<a>
+		<div class="p-pic"><img src="chimpified.jpeg"></div>
+		<div class="p-txt"><img src="jilt.png"></div>
+	</a>
+</div>
+
+
+
+
+
+
+
+<div class="m-news">
+	<ul class="u-ul1" id="u-ul1">
+		<li class="u-item">
+			<a href="">
+				<p class="u-txt">文字介绍文字介绍文字介绍文字介绍文字介绍</p>
+				<div class="u-pic">
+					<img src="yxsd01.jpg">
+				</div>
+			</a>
+				<a href="">
+				<p class="u-txt">文字介绍文字介绍文字介绍文字介绍文字介绍</p>
+				<div class="u-pic">
+					<img src="yxsd01.jpg">
+				</div>
+			</a>
+				<a href="">
+				<p class="u-txt">文字介绍文字介绍文字介绍文字介绍文字介绍</p>
+				<div class="u-pic">
+					<img src="yxsd01.jpg">
+				</div>
+			</a>
+				<a href="">
+				<p class="u-txt">文字介绍文字介绍文字介绍文字介绍文字介绍</p>
+				<div class="u-pic">
+					<img src="yxsd01.jpg">
+				</div>
+			</a>
+				<a href="">
+				<p class="u-txt">文字介绍文字介绍文字介绍文字介绍文字介绍</p>
+				<div class="u-pic">
+					<img src="yxsd01.jpg">
+				</div>
+			</a>
+				<a href="">
+				<p class="u-txt">文字介绍文字介绍文字介绍文字介绍文字介绍</p>
+				<div class="u-pic">
+					<img src="yxsd01.jpg">
+				</div>
+			</a>
+		</li>
+	</ul>
+</div>
+
+<script type="text/javascript">
+	$(function(){
+		$(".u-item a").eq(0).children(".u-pic").show();
+		$(".u-item a").hover(function(){
+			$(this).siblings().children(".u-pic").hide();
+			$(this).children(".u-pic").show();
+		});
+	});
+</script>
+
+<div class="stage s1">
+    <div class="container">
+        <img src="http://www.w3cplus.com/sites/default/files/blogs/2013/1311/cardKingClub.png" alt="" width="140" height="200" />
+        <img src="http://www.w3cplus.com/sites/default/files/blogs/2013/1311/cardKingClub.png" alt="" width="140" height="200" />
+    </div>
+</div>
+<div class="stage s2">
+    <div class="container">
+        <img src="http://www.w3cplus.com/sites/default/files/blogs/2013/1311/cardKingClub.png" alt="" width="140" height="200" />
+        <img src="http://www.w3cplus.com/sites/default/files/blogs/2013/1311/cardKingClub.png" alt="" width="140" height="200" />
+    </div>
+</div>
+<div class="stage s3">
+    <div class="container">
+        <img src="http://www.w3cplus.com/sites/default/files/blogs/2013/1311/cardKingClub.png" alt="" width="140" height="200" />
+        <img src="http://www.w3cplus.com/sites/default/files/blogs/2013/1311/cardKingClub.png" alt="" width="140" height="200" />
+    </div>
+</div>
+<div class="stage s4">
+    <div class="container">
+        <img src="http://www.w3cplus.com/sites/default/files/blogs/2013/1311/cardKingClub.png" alt="" width="140" height="200" />
+        <img src="http://www.w3cplus.com/sites/default/files/blogs/2013/1311/cardKingClub.png" alt="" width="140" height="200" />
+    </div>
+</div>
+</body>
+</html>
